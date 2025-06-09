@@ -6,6 +6,7 @@
 #include "ex05/ft_putstr.c"
 #include "ex06/ft_strlen.c"
 #include "ex07/ft_rev_int_tab.c"
+#include "ex08/ft_sort_int_tab.c"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -196,6 +197,61 @@ void	test_ex07(void)
 	printf("\n");
 }
 
+void	test_ex08(void)
+{
+ 	printf("\nTesting ex08/ft_sort_int_tab.c ...\n\n");
+	int a[] = {525, 23, 23, 63, 223, 9, 5, 3, 1};
+	int b[] = {525, 23};
+	int c[] = {525};
+	int	i;
+
+	i = 0;
+	while (i < 9)
+	{
+		printf("%d, ", a[i]);
+		i++;
+	}
+	ft_sort_int_tab(a, 9);
+	i = 0;
+	printf("\n");
+	while (i < 9)
+	{
+		printf("%d, ", a[i]);
+		i++;
+	}
+ 	printf("\n");
+	i = 0;
+	while (i < 2)
+	{
+		printf("%d, ", b[i]);
+		i++;
+	}
+	ft_sort_int_tab(b, 2);
+	i = 0;
+	printf("\n");
+	while (i < 2)
+	{
+		printf("%d, ", b[i]);
+		i++;
+	}
+ 	printf("\n");
+	i = 0;
+	while (i < 1)
+	{
+		printf("%d, ", c[i]);
+		i++;
+	}
+	ft_sort_int_tab(c, 1);
+	i = 0;
+	printf("\n");
+	while (i < 1)
+	{
+		printf("%d, ", c[i]);
+		i++;
+	}
+ 	printf("\n");
+}
+
 void	test_all(void)
 {
 test_ex00();
@@ -206,6 +262,7 @@ test_ex04();
 test_ex05();
 test_ex06();
 test_ex07();
+test_ex08();
 }
 
 void	test_i(int i)
@@ -218,6 +275,7 @@ if(i == 4) test_ex04();
 if(i == 5) test_ex05();
 if(i == 6) test_ex06();
 if(i == 7) test_ex07();
+if(i == 8) test_ex08();
 }
 
 int	main(int argc, char *argv[])
