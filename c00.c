@@ -69,7 +69,10 @@ void	test_ex07(void)
 	// 		  1000000000 edge case, cannot multiply by 10 here again
 	ft_putnbr(6470);
 	write(1, " ", 1);
+	ft_putnbr(10);
+	write(1, " ", 1);
 	ft_putnbr(2147483647);
+	write(1, " ", 1);
 	ft_putnbr(-2147483647);
 	write(1, " ", 1);
 	ft_putnbr(1000);
