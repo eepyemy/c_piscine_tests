@@ -47,6 +47,21 @@ find $(git rev-parse --show-toplevel) -wholename "*/ex*/*.c" | while read line ;
 	relpath=$(realpath --relative-to=$(pwd) $line)
 	exdir=${line%/*}
 	exdir=${exdir##*/}
+	sed -i "/#include <stdio.h>/i#include \"$relpath\"" $filename
+	last=$exdir
+done
+
+last="ex$for_path"
+#echo $last
+find $(git rev-parse --show-toplevel) -wholename "*/ex*/*.c" | while read line ; do
+	if (($i <= $last_added));
+	then
+		i=$(($i+1))
+		continue
+	fi
+	relpath=$(realpath --relative-to=$(pwd) $line)
+	exdir=${line%/*}
+	exdir=${exdir##*/}
 	sed -i "/ test_$last();$/aif(i == $i) test_$exdir();" $filename
 	last=$exdir
 	i=$(($i+1))
