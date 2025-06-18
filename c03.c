@@ -188,11 +188,11 @@ void	test_ex04(void)
 	printf("\n");
 
 	char x[] = "ababababababcdddddddde";
-	char y[] = "egba";
+	char y[] = "e";
 	printf("\nfirst: %s, second: %s,", x, y);
 	printf( " ft_strstr = %s",  ft_strstr(x, y));
 	char z[] = "ababababababcdddddddde";
-	char w[] = "egba";
+	char w[] = "e";
 	printf("\nfirst: %s, second: %s,", z, w);
 	printf( " strstr = %s",  strstr(z, w));
 }
