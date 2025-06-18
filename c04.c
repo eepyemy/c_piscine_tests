@@ -82,9 +82,9 @@ void	test_ex02(void)
 void	test_ex03(void)
 {
 	printf("\nTesting ex03/ft_atoi.c ...\n\n");
-	char a[] = "+-+++-+---------123213.123213dfasdfdg";
+	char a[] = "a-----+++123";
 	printf("\nstr: %s, ft_atoi: %d", a, ft_atoi(a));
-	char b[] = "+-+++-+--------123213";
+	char b[] = " ----- ---123";
 	printf("\nstr: %s, ft_atoi: %d", b, ft_atoi(b));
 	char c[] = "     \t\r\n\v\f+-+++-+---------123213dfasdfdg";
 	printf("\nstr: %s, ft_atoi: %d", c, ft_atoi(c));
@@ -92,7 +92,7 @@ void	test_ex03(void)
 	printf("\nstr: %s, ft_atoi: %d", d, ft_atoi(d));
 	char e[] = "123213";
 	printf("\nstr: %s, ft_atoi: %d", e, ft_atoi(e));
-	char f[] = "-1";
+	char f[] = "7";
 	printf("\nstr: %s, ft_atoi: %d", f, ft_atoi(f));
 	char g[] = "";
 	printf("\nstr: %s, ft_atoi: %d", g, ft_atoi(g));
@@ -123,7 +123,7 @@ void	test_ex05(void)
 	char b[] = "+-+++-+--------123213";
 	char base2[] = "";
 	printf("\nstr: %s, base: %s, ft_atoi_base: %d", b, base2, ft_atoi_base(b, base2));
-	char base3[] = "010";
+	char base3[] = "012";
 	char c[] = "     \t\r\n\v\f+-+++-+---------123213dfasdfdg";
 	printf("\nstr: %s, base: %s, ft_atoi_base: %d", c, base3, ft_atoi_base(c, base3));
 	char base4[] = "012";
@@ -138,7 +138,16 @@ void	test_ex05(void)
 	char base7[] = "0123456789ABCDEF";
 	char g[] = "+-+++-+---------asdFsa";
 	printf("\nstr: %s, base: %s, ft_atoi_base: %d", g, base7, ft_atoi_base(g, base7));
- 	printf("\n");
+	char base8[] = "0123456789ABCDEF";
+	char h[] = "";
+	printf("\nstr: %s, base: %s, ft_atoi_base: %d", h, base8, ft_atoi_base(h, base8));
+ 	char base9[] = "0123456789";
+	char l[] = "2147483647";
+	printf("\nstr: %s, base: %s, ft_atoi_base: %d", l, base9, ft_atoi_base(l, base9));
+	char base10[] = "0123456789";
+	char m[] = "+-+++-+------- --1232";
+	printf("\nstr: %s, base: %s, ft_atoi_base: %d", m, base10, ft_atoi_base(m, base10));
+	printf("\n");
 }
 
 void	test_all(void)
