@@ -169,11 +169,11 @@ void	test_ex04(void)
 	printf( " strstr = %s",  strstr(k, l));
 
 	char m[] = "ababababababcdddddddde";
-	char n[] = "e";
+	char n[] = "egba";
 	printf("\nfirst: %s, second: %s,", m, n);
 	printf( " ft_strstr = %s",  ft_strstr(m, n));
 	char o[] = "ababababababcdddddddde";
-	char p[] = "e";
+	char p[] = "egba";
 	printf("\nfirst: %s, second: %s,", o, p);
 	printf( " strstr = %s",  strstr(o, p));
 
@@ -186,6 +186,15 @@ void	test_ex04(void)
 	printf("\nfirst: %s, second: %s,", t, u);
 	printf( " strstr = %s",  strstr(t, u));
 	printf("\n");
+
+	char x[] = "ababababababcdddddddde";
+	char y[] = "egba";
+	printf("\nfirst: %s, second: %s,", x, y);
+	printf( " ft_strstr = %s",  ft_strstr(x, y));
+	char z[] = "ababababababcdddddddde";
+	char w[] = "egba";
+	printf("\nfirst: %s, second: %s,", z, w);
+	printf( " strstr = %s",  strstr(z, w));
 }
 
 void	test_ex05(void)
