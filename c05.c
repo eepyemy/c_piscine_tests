@@ -14,6 +14,7 @@
 void	test_ex00(void)
 {
 	printf("\nTesting ex00/ft_iterative_factorial.c ...\n\n");
+	printf("\nnumber: %d, iterative_factorial: %d", 0, ft_iterative_factorial(0));
 	printf("\nnumber: %d, iterative_factorial: %d", 1, ft_iterative_factorial(1));
 	printf("\nnumber: %d, iterative_factorial: %d", 2, ft_iterative_factorial(2));
 	printf("\nnumber: %d, iterative_factorial: %d", 3, ft_iterative_factorial(3));
@@ -28,6 +29,7 @@ void	test_ex00(void)
 void	test_ex01(void)
 {
 	printf("\nTesting ex01/ft_recursive_factorial.c ...\n\n");
+	printf("\nnumber: %d, iterative_factorial: %d", 0, ft_recursive_factorial(0));
 	printf("\nnumber: %d, iterative_factorial: %d", 1, ft_recursive_factorial(1));
 	printf("\nnumber: %d, iterative_factorial: %d", 2, ft_recursive_factorial(2));
 	printf("\nnumber: %d, iterative_factorial: %d", 3, ft_recursive_factorial(3));
